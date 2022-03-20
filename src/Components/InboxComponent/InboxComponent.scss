@@ -1,0 +1,67 @@
+.Inbox{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    border-radius: 3px;
+    background-color: white;
+    position: relative;
+
+    .InboxCount{
+        display: flex;
+         .left{
+            margin: 15px;
+            flex: 6;
+
+            .header{
+                margin: 5px;
+                font-size: 40px;
+                font-weight: 400;
+            }
+
+            .buttonGroup{
+                display: flex;
+                align-items: center;
+                justify-content: baseline;
+                margin: 5px; 
+                
+                .b{
+                    border-color: rgb(182, 180, 180);
+                    margin: 3px;
+                }
+            }
+         }
+        
+    
+    .right{
+        flex: 6;
+        flex-direction: column;
+
+        .Search{
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+
+            input{
+                padding: 7px;
+                font-size: medium;
+                border-color: grey;
+                border-radius: 3px;
+                height: 15px;
+                border-width: 0.5px;
+            }
+
+            .searchButton{
+                background-color: rgb(29, 161, 132);
+            }
+        }
+        .arrow{
+            
+            display: flex;
+            align-items: center;
+            justify-content: right;    
+        }
+    }
+}
+
+}
