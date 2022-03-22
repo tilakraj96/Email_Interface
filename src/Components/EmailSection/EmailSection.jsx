@@ -9,6 +9,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import CircleIcon from '@mui/icons-material/Circle';
 import LabelIcon from '@mui/icons-material/Label';
 import InboxComponent from '../InboxComponent/InboxComponent';
+import ComposeEmail from '../ComposeEmail/ComposeEmail'
 
 export default function EmailSection() {
 
@@ -17,7 +18,8 @@ export default function EmailSection() {
   return (
     <div className='EmailSection'>
         <div className="left">
-            <button className='Compose'>Compose Mail</button>
+            <ComposeEmail/>
+            {/* <button className='Compose'>Compose Mail</button> */}
             <div className='heading'>Folders</div>
             <ul>
                 <li>

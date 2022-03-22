@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './MailData.scss';
 import { DataGrid } from '@mui/x-data-grid';
-import { Users } from '../../data';
+// import { Users } from '../../data';
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
@@ -11,12 +11,12 @@ const columns = [
 
 
 
-export default function DataTable() {
+export default function DataTable({users}) {
   return (
       <div className="MailData">
           <div style={{ height: 400, width: '100%' }}>
             <DataGrid
-                rows={Users}
+                rows={users}
                 columns={columns}
                 pageSize={7}
                 rowsPerPageOptions={[7]}

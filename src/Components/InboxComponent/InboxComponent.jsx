@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './InboxComponent.scss'
 import { Users } from '../../data';
 import { Button } from '@mui/material';
@@ -10,10 +10,19 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import MailData from '../MailData/MailData';
 
+
 export default function InboxComponent() {
 
+    
 const [selected,setSelected] = useState('');
 const [data,setData]=useState([]);
+
+
+useEffect(()=>{
+    localStorage.setItem('user', JSON.stringify(Users));
+    const user = localStorage.getItem('user');
+    console.log(user);
+},[])
 
   return (
     <div className='Inbox'>
@@ -39,7 +48,7 @@ const [data,setData]=useState([]);
         </div>
         </div>
         <div className="Emails">
-            <MailData/>
+            <MailData users={Users}/>
         </div>
     </div>
   )
